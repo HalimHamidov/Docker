@@ -1,4 +1,5 @@
- # docker-1
+
+# docker-1
 
 
 Docker
@@ -18,7 +19,8 @@ ln -s /goinfre/docker Library/com.docker.docker
 https://github.com/VBrazhnik/docker-1/wiki/How-to-Docker
 
 https://labs.play-with-docker.com/p/bnn6efot9690009ba990#bnn6efot_bnn6eg0t9690009ba99g
-
+cshinoha - Саша
+github.com/apranzo mikim42
 
 `docker-1` is a School 42 Docker project.
 
@@ -1377,6 +1379,22 @@ https://support.teamspeakusa.com/index.php?/Knowledgebase/Article/View/344/16/ho
 https://teamspeak.com/en/thanks-for-downloading-teamspeak/
 https://files.teamspeak-services.com/releases/server/3.10.2/
 
+docker-machine restart Char
+eval $(docker-machine env Char)
+docker build -t ex02 .
+docker run -it --rm -p 30033:30033 -p 10011:10011 -p 9987:9987/udp  ex02
+move Teamspeak icon to Desktop to create link
+enter hit it.
+when opened
+enter CTRL S and enter IP of docker-machine ip Char
+loginname= "serveradmin", password= "vunyM1G0"
+
+token=d3HFW7rQq0fRV5ktHklHgZyv1s7YhOumRYGT0Vrw
+￼<23:32:00> Trying to connect to server on 192.168.99.109
+￼<23:32:01> Welcome to TeamSpeak, check www.teamspeak.com for latest information
+￼<23:32:01> Connected to Server: "TeamSpeak ]I[ Server"
+￼<23:32:12> "serveradmin" was added to server group "Server Admin" by "TeamSpeak ]I[ Server".
+￼<23:32:12> Server properties have been edited by "TeamSpeak ]I[ Server"
 
 il-j2% docker build .
 Sending build context to Docker daemon  15.36kB
@@ -2740,8 +2758,6 @@ Step 3/3 : CMD        ["rails", "s", "-b", "0.0.0.0", "-p", "3000"]
 Removing intermediate container 54e4113b8876
 ---> 64f04cc7c40a
 Successfully built 64f04cc7c40a
-il-j2% ды
-zsh: command not found: ды
 il-j2% ls
 Dockerfile    app        ft_rails
 il-j2% docker run --rm -it -p 3000:3000 64f04cc7c40a
@@ -2830,7 +2846,7 @@ Completed 200 OK in 41ms (Views: 40.1ms | ActiveRecord: 0.0ms)
 
 
 http://localhost:3000/
-
+http://192.168.99.109:3000/
 
 ^C[1] - Gracefully shutting down workers...
 [1] === puma shutdown: 2019-12-14 16:41:08 +0000 ===
@@ -2863,7 +2879,7 @@ docker build -t ft-rails:on-build . /ft-rails && \
 docker build -t ex02 . && \
 docker run --rm -it -p 3000:3000 ex02
 
-
+http://192.168.99.109:3000/
 
 
 =========
@@ -2873,6 +2889,10 @@ Docker can be useful to test an application that’s still being developed witho
 
 apearl@student.21-school.ru
 
+--
+docker build -t ex03 .
+docker run -it --rm -p 8080:80 -p 8022:22 -p 8443:443 --privileged ex03
+--
 
 --
 * ruby_block[Delete unmanaged env files for alertmanager service] action run (skipped due to only_if)
@@ -3949,3 +3969,7 @@ EXPOSE 443 80 22
 ENTRYPOINT (/opt/gitlab/embedded/bin/runsvdir-start &) && gitlab-ctl reconfigure && tail -f /dev/null
 
 http://localhost:8080/
+
+
+docker build -t ex03 .
+docker run -it --rm -p 8080:80 -p 8022:22 -p 8443:443 --privileged ex03
