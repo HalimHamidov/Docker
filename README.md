@@ -3973,3 +3973,28 @@ http://localhost:8080/
 
 docker build -t ex03 .
 docker run -it --rm -p 8080:80 -p 8022:22 -p 8443:443 --privileged ex03
+
+
+
+========================
+Docker
+========================
+
+https://github.com/VBrazhnik/docker-1/wiki
+
+In this perspective, here are some very useful links for your project:
+• [The excellent Docker oﬃcial documentation](https://docs.docker.com/)
+• [Docker’s public Registry](https://hub.docker.com/)
+• [Docker’s oﬃcial Github with many upcoming projects](https://github.com/docker)
+• [Jessie Frazelle’s blog, former main contributor on Docker](https://github.com/jessfraz)
+• Her Github with many good ideas
+
+https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
+
+https://gitlab.com/gitlab-org/gitlab-foss
+
+https://rubyonrails.org/
+
+=====================
+VM Chapter 4 && 6 Docker https://courses.edx.org/courses/course-v1:LinuxFoundationX+LFS151.x+2T2018/course/
+
